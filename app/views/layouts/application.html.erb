@@ -51,6 +51,7 @@
         <!--<a class="navbar-brand" href="#">AdminReluis</a> -->
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
+            <li><%= link_to "Home", root_path  %></li>
             <li><%= link_to "About Us", "/path1"  %></li>
             <li><%= link_to "Contact Us", "/path2"  %></li>
             <li><%= link_to "Projects", "/path3"  %></li>
@@ -59,9 +60,13 @@
             <% if user_signed_in? %>
                 <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
             <% else %>
+                <!-- <li><%= link_to new_user_session_path do %>
+                      <%= image_tag 'login.png' %>
+                  <% end %></li> -->
                 <li><%= link_to "Sign in", new_user_session_path %></li>
                 <li><%= link_to "Sign up", new_user_registration_path %></li>
-            <% end %>
+                <li><%= link_to "Sign in as Admin", admin_user_session_path %></li>
+          <% end %>
           </ul>
         </div>
       </div>
