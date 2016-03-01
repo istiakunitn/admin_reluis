@@ -4,6 +4,8 @@ Rails.application.routes.draw do
       sessions: 'users/sessions'
   }
   root "home#index"
+  #get "/home/:about_us" => "home#show"
+  get 'about_us' => 'home#show', as: 'about_us'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
