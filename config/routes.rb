@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
   #devise_for :users
+  resources :contacts, only: [:new, :create]
   devise_for :users, controllers: {
       sessions: 'users/sessions'
   }
   root "home#index"
   #get "/home/:about_us" => "home#show"
   get 'about_us' => 'home#about_us', as: 'about_us'
-
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
