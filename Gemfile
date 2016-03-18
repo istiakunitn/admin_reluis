@@ -45,9 +45,11 @@ group :development do
   gem 'spring'
 end
 
-  gem 'devise'
-  gem 'activeadmin'
-  gem "therubyracer"
-  gem "less-rails"
-  gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-  gem 'mail_form', '~> 1.5.1'
+gem 'devise'
+gem 'activeadmin'
+gem "therubyracer"
+gem "less-rails"
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'mail_form', '~> 1.5.1'
+gem 'formtastic-bootstrap'
+

@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   #devise_for :users
   resources :contacts, only: [:new, :create]
   devise_for :users, controllers: {
-      sessions: 'users/sessions'
+      sessions: 'users/sessions',
+      registrations: 'users/registrations'
   }
   root "home#index"
   #get "/home/:about_us" => "home#show"

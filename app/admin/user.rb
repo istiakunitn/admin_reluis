@@ -23,7 +23,7 @@ ActiveAdmin.register User do
     actions
   end
 
-  permit_params :email, :username, :institution, :password, :password_confirmation
+  permit_params :email, :username, :institution_id, :password, :password_confirmation
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
