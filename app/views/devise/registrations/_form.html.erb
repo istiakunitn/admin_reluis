@@ -5,12 +5,19 @@
         <%= f.input :username %>
     <% end %>
 
+    <%= f.input :full_name %>
     <%= f.input :institution %>
+    <%= f.inputs "Attachment", :multipart => true do %>
+    <%= f.input :profile_picture, as: :file %>
+    <% end %>
+    <%= f.input :current_password, hint: 'Please give your current password to change your information or
+     do nothing if you are a new user' %>
 
 
-    <%= f.input :current_password, hint: 'Please give your current password to change your information' %>
-    <%= f.input :password, hint: 'Leave blank if you don\'t want to change it' %>
+    <%= f.input :password, hint: 'Must needed for new user and the minimum length is eight or
+     Leave blank if you don\'t want to change it while updating' %>
     <%= f.input :password_confirmation %>
+
 
     <%= f.action :submit, label: resource.new_record? ? 'Sign Up' : 'Update' %>
 <% end %>

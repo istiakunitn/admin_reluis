@@ -52,4 +52,5 @@ gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'mail_form', '~> 1.5.1'
 gem 'formtastic-bootstrap'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 
