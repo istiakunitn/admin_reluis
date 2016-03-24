@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root "home#index"
   #get "/home/:about_us" => "home#show"
   get 'about_us' => 'home#about_us', as: 'about_us'
+  get 'myprofile' => 'home#profile', as: 'myprofile'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 

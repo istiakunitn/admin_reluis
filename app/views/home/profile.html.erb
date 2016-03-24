@@ -1,0 +1,18 @@
+<%- model_class = User -%>
+<h2>My Profile</h2>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @account.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:full_name) %>:</strong></dt>
+  <dd><%= @account.full_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:username) %>:</strong></dt>
+  <dd><%= @account.username %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:institution_id) %>:</strong></dt>
+  <dd><%= @account.institution_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:profile_picture) %>:</strong></dt>
+  <dd><%= image_tag @account.profile_picture.url(:medium) %></dd>
+</dl>
+
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+            edit_user_registration_path(@account), :class => 'btn btn-default' %>
