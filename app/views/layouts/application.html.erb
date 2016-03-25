@@ -56,24 +56,26 @@
         <li><%= link_to "Contact Us", new_contact_path %></li>
         <li><%= link_to "Projects", "/path3" %></li>
       </ul>
+
       <ul class="nav nav-pills pull-right">
+
         <% if user_signed_in? %>
-            Signed in as <%= current_user.email %>.
-            <%= link_to "My Profile", myprofile_path %>
-            |
-            <%= link_to "Edit Profile", edit_user_registration_path %>
-            |
-            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 
+            <%= drop_down "Account" do %>
+                <%= menu_item "My Profile", myprofile_path %>
+                <%= menu_item "Edit Profile", edit_user_registration_path %>
+                <%= menu_item "Sign out", destroy_user_session_path, :method => :delete %>
+            <% end %>
 
-      <% else %>
-            <!-- <li><%= link_to new_user_session_path do %>
-                      <%= image_tag 'login.png' %>
-                  <% end %></li> -->
-            <li><%= link_to "Sign in", new_user_session_path %></li>
-            <li><%= link_to "Sign up", new_user_registration_path %></li>
-            <li><%= link_to "Sign in as Admin", admin_user_session_path %></li>
+        <% else %>
+
+            <%= drop_down "Sign In/Up" do %>
+                <%= menu_item "Sign In", new_user_session_path %>
+                <%= menu_item "Sign Up", new_user_registration_path %>
+                <%= menu_item "Sign in as Admin", admin_user_session_path %>
+            <% end %>
         <% end %>
+
       </ul>
     </div>
   </div>
