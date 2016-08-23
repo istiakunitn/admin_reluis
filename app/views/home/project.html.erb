@@ -1,0 +1,26 @@
+<% if user_signed_in? %>
+    <h1>Search</h1>
+    <div class="inputs">
+      <div class="form-group label-static is-empty">
+        <label for="Public_IP" class="control-label">Public_IP</label>
+        <input type="text" class="form-control typeahead-studyid" id="Public_IP" placeholder="Type Public_IP">
+
+        <p class="help-block"><code>HINT:</code> Select the IP_address for the project details (UNITN, UNINA or UNIPV)</p>
+        <span class="material-input"></span>
+      </div>
+    </div>
+
+    <div class="inputs">
+      <div class="form-group label-static is-empty">
+        <label for="Project_ID" class="control-label">Project_ID</label>
+        <input type="text" class="form-control typeahead-usubid" id="Project_ID" placeholder="Type Project_ID">
+
+        <p class="help-block"><code>HINT:</code> When you type Projet_ID, you will see details for the Project (Starts with Number)</p>
+        <span class="material-input"></span>
+      </div>
+    </div>
+<% else %>
+
+    <h2>Please Sign In or Sign Up to access projects.</h2>
+    <%= link_to "Contuct Us ", new_contact_path %> for further information.
+<% end %>

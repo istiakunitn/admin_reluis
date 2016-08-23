@@ -51,10 +51,10 @@
     <!--<a class="navbar-brand" href="#">AdminReluis</a> -->
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Home", root_path, style: 'color:#333333;'%></li>
         <li><%= link_to "About Us", about_us_path %></li>
         <li><%= link_to "Contact Us", new_contact_path %></li>
-        <li><%= link_to "Projects", "/path3" %></li>
+        <li><%= link_to "Projects", projects_path %></li>
       </ul>
 
       <ul class="nav nav-pills pull-right">
@@ -89,15 +89,15 @@
     </div>
     <div class="col-lg-3">
       <div class="well sidebar-nav">
-        <h3>Sidebar</h3>
+        <h3>News</h3>
         <ul class="nav nav-list">
-          <li class="nav-header">Sidebar</li>
-          <li><%= link_to "Link1", "/path1" %></li>
-          <li><%= link_to "Link2", "/path2" %></li>
-          <li><%= link_to "Link3", "/path3" %></li>
+         <!-- <li class="nav-header">News</li> -->
+          <li><%= link_to "News1", "/path1" %></li>
+          <li><%= link_to "News2", "/path2" %></li>
+          <li><%= link_to "News3", "/path3" %></li>
         </ul>
       </div><!--/.well -->
-    </div><!--/span-->
+    </div> <!--/span-->
   </div><!--/row-->
 
   <footer>
